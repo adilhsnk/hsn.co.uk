@@ -1,0 +1,255 @@
+/* General Styling for All Pages */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #0d1b2a;
+    color: white;
+    overflow-x: hidden;
+}
+
+h1, h2 {
+    font-weight: bold;
+    color: #ffc300;
+}
+
+p, ul {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+a {
+    color: #ffc300;
+    text-decoration: none;
+}
+
+header, footer {
+    background-color: #1e3d59;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+header ul li {
+    margin: 0 15px;
+}
+
+header ul li a {
+    color: #ffc300;
+    font-weight: bold;
+}
+
+.logo {
+    height: 60px;
+}
+
+footer {
+    font-size: 0.9em;
+}
+
+/* Main Content Styling */
+.main-content {
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 100px auto;
+    max-width: 1200px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+/* Services Section */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-items: center;
+}
+
+.service-item {
+    background-color: #1e3d59;
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.service-item h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    background-color: #ffc300;
+    color: #0d1b2a;
+}
+
+/* Training Page Tiles */
+.training-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-items: center;
+    margin-top: 50px;
+}
+
+.training-item {
+    background-color: #1e3d59;
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.training-item h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.training-item p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.training-item:hover {
+    transform: translateY(-10px);
+}
+
+.pricing-btn, .more-info-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #ffc300;
+    color: #0d1b2a;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pricing-btn:hover, .more-info-btn:hover {
+    background-color: #ff9f1c;
+}
+
+@media (max-width: 768px) {
+    .services-grid, .training-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-content {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .header ul {
+        flex-direction: column;
+    }
+
+    .logo {
+        height: 50px;
+    }
+}
+
+/* Contact Page */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ffc300;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+.contact-form button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #ffc300;
+    color: #0d1b2a;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #ff9f1c;
+}
+
+/* Virus Particle Styling for Index Page */
+#virus-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Make sure it's behind other content */
+    overflow: hidden;
+    background-color: black; /* Just in case, so it's visible */
+}
+
+.virus {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #ff1e56;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ff1e56;
+    animation: float 10s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.virus:hover {
+    transform: translate(50px, 50px);
+    transition: transform 0.2s ease-out;
+}
